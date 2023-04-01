@@ -1,0 +1,29 @@
+{% extends 'tour/layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block text %}
+
+<ul class="list-articles">
+	{% for p in tours %}
+			<li><div class="article-panel">
+	<p class="first">{{p.name}} </p>
+	<p class="last"> {{p.content}} </p>
+</div>
+
+
+<!--{% if p.photo %}-->
+<!--	<p><img class="img-article-left thumb" src="{{p.photo.url}}"/></p>-->
+<!--{% endif %}-->
+
+	        <h2>{{p.country}}</h2>
+
+
+			<div class="clear"></div>
+<!--			<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Постты оқу</a></p>-->
+			</li>
+
+	{% endfor %}
+</ul>
+
+{% endblock %}
